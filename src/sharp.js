@@ -2,7 +2,7 @@
 import sharp from 'sharp';
 import { readdirSync, existsSync, mkdirSync, writeFile } from 'fs';
 import path from 'path';
-const directories = ['./assets/images', './assets/images/slider', './assets/images/gallery/concerts', './assets/images/gallery/entreprise', './assets/images/gallery/mariage', './assets/images/gallery/portraits']
+const directories = ['../assets/images', '../assets/images/slider', '../assets/images/gallery/concerts', '../assets/images/gallery/entreprise', '../assets/images/gallery/mariage', '../assets/images/gallery/portraits']
 // const imageSizes = [
 //   {size: 150 , sizeName: 'xx-small'},
 //   {size: 304 , sizeName: 'x-small'},
@@ -106,8 +106,8 @@ let fileSizesRendered = [];
     console.log(fileSizesRendered);
     const imageData = JSON.stringify(fileSizesRendered)
   
-    writeFile('./assets/imageRenderSizes.json', imageData, function (err) {   if (err) throw err;   console.log('Fichier créé !');});
-// ./assets/imageRenderSizes.json   was  :  imageRenderSizes.json   to be tested!
+    writeFile('../assets/imageRenderSizes.json', imageData, function (err) {   if (err) throw err;   console.log('Fichier créé !');});
+// ../assets/imageRenderSizes.json   was  :  imageRenderSizes.json   to be tested!
   }, "60000");
 
 
