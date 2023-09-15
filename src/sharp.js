@@ -12,7 +12,8 @@ const directories = ['./assets/images', './assets/images/slider', './assets/imag
 //   {size: 1120, sizeName: 'medium-plus'},
 //   {size: 1580, sizeName: 'large'},
 //   {size: 1920 , sizeName: 'x-large'},
-//   {size: 2040, sizeName: 'xx-large'}
+//   {size: 2040, sizeName: 'xx-large'},
+//   {size: 2410, sizeName: 'xxx-large'}
 // ]
 
 const imageSizes = [
