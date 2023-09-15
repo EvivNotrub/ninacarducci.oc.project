@@ -11,6 +11,7 @@
   "author": "ninacarducci/barthelemywerle",
   "license": "ISC",
   "devDependencies": {
+    "common-es": "^1.0.1",
     "sharp": "^0.32.5"
   }
 }

@@ -16,10 +16,11 @@ function addSrcSet(){
         const newRelDir = newDir.substr(newDir.indexOf("5500") + 4)
         const file = image.src.substr(image.src.lastIndexOf("/") + 1);
         const fileName = file.replace(/\.[^/\\.]+$/, "");
-        // console.log("image :", image, "\nnewDir :", newDir, "\nfile :", file, "\NfileName :", fileName);
+        console.log("image :", image, "\nnewDir :", newDir, "\nfile :", "\nnewRelDir: ", newRelDir, file, "\NfileName :", fileName);
         const imageSizesList = await getImageSizes();
-        console.log("imageSizesList :", imageSizesList);
         let pathList = [];
+
+        image.src = `.${newRelDir}${fileName}.webp`
 
         const imageResizeInfo = imageSizesList.find(el => el.fileName === fileName);
         if(imageResizeInfo.fileSizes.length){
