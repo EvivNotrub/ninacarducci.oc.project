@@ -1,17 +1,20 @@
 import sharp from 'sharp';
 import { readdirSync, existsSync, mkdirSync, writeFile } from 'fs';
 import path from 'path';
-const input = 'http://127.0.0.1:5500/assets/images/nina/nina-small-medium.webp';
+
+//enter below the path returned by lighthouse and the sizes of the image: ressource sizes and potential saving 
+const input = 'http://127.0.0.1:5500/assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash/aaron-paul-wnX-fXzB6Cw-unsplash-small-medium.webp';
+
+
 const file = path.basename(input);
 const fileName = path.parse(input).name;
 const directory = path.dirname(input);
 const newRelDir = directory.substr(directory.indexOf("5500") + 4)
-const reduced = 50;
+const reduced = 65;
 // const size = 700;
-
+console.log("reduced", reduced);
 function isFileImage(input) {
   const ext = path.extname(input);
-  console.log(ext.toLocaleLowerCase(), ext);
   switch (ext.toLowerCase()) {
   case '.jpg':
   case '.gif':
