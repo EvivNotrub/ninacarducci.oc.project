@@ -1,5 +1,9 @@
 import {generate} from 'critical';
 
+//package json options
+//     "critical": "critical --base ./ --inline index.html --css boot.min.css --width 1300 --height 900 --minify --extract --out dist/"
+
+
 generate({
     // Inline the generated critical-path CSS
     // - true generates HTML
@@ -19,8 +23,8 @@ generate({
 
     dimensions: [
         {
-          height: 550,
-          width: 350,
+          height: 900,
+          width: 400,
         },
         {
             height: 969,

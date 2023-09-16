@@ -9,7 +9,7 @@
     "sharp": "node ./src/sharp.js",
     "sharp-mono": "node ./src/sharp-mono.js",
     "purgecss": "node ./purgecss__app.js",
-    "critical": "critical --base ./ --inline index.html --css boot.min.css --width 1300 --height 900 --minify --extract --out dist/"
+    "critical": "node critical.js"
   },
   "author": "ninacarducci/barthelemywerle",
   "license": "ISC",
