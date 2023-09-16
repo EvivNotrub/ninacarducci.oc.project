@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sharp": "node ./src/sharp.js",
     "sharp-mono": "node ./src/sharp-mono.js",
-    "purgecss": "node ./purgecss_app.js",
+    "purgecss": "node ./purgecss__app.js",
     "critical": "critical --base ./ --inline index.html --css boot.min.css --width 1300 --height 900 --minify --extract --out dist/"
   },
   "author": "ninacarducci/barthelemywerle",
