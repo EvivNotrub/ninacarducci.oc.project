@@ -1,6 +1,9 @@
 # ninacarducci.oc.project
 OpenClassrooms project to learn SEO optimisation
 
+Original github pages version from ninacarducci:
+https://ninacarducci.github.io
+
 
 jsDelivery is used as cdn:
 
