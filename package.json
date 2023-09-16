@@ -7,12 +7,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sharp": "node ./src/sharp.js",
-    "sharp-mono": "node ./src/sharp-mono.js"
+    "sharp-mono": "node ./src/sharp-mono.js",
+    "purgecss": "purgecss --css boot.min.css --content index.html --out dist/",
+    "critical": "critical --base ./ --inline index.html --css boot.min.css --width 1300 --height 900 --minify --extract --out dist/"
   },
   "author": "ninacarducci/barthelemywerle",
   "license": "ISC",
   "devDependencies": {
     "common-es": "^1.0.1",
+    "critical": "^5.3.0",
+    "purgecss": "^5.0.0",
     "sharp": "^0.32.5"
   }
 }

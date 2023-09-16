@@ -13,7 +13,7 @@ function addSrcSet(){
     const allImages = document.querySelectorAll('img[src*="./assets/images"]')
     allImages.forEach(async (image) => {
         const newDir = image.src.replace(/\.[^/\\.]+$/, "/")
-        const newRelDir = newDir.substr(newDir.indexOf("5500") + 4)
+        const newRelDir = newDir.substr(newDir.indexOf("assets") -1)
         const file = image.src.substr(image.src.lastIndexOf("/") + 1);
         const fileName = file.replace(/\.[^/\\.]+$/, "");
         console.log("image :", image, "\nnewDir :", newDir, "\nfile :", "\nnewRelDir: ", newRelDir, file, "\NfileName :", fileName);
