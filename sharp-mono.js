@@ -9,7 +9,7 @@ const input = 'http://127.0.0.1:5500/assets/images/slider/edward-cisneros-3_h6-1
 const file = path.basename(input);
 const fileName = path.parse(input).name;
 const directory = path.dirname(input);
-const newRelDir = directory.substr(directory.indexOf("5500") + 4)
+const newRelDir = directory.substr(directory.indexOf("assets") -1)
 const reduced = 65;
 const size = 1860;
 console.log("reduced", reduced);
