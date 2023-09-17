@@ -12,7 +12,7 @@ const directory = path.dirname(input);
 const newRelDir = directory.substr(directory.indexOf("assets") -1)
 const reduced = null ;
 const reducedAttribute = reduced ? `-quality-${reduced}` : '';
-const size = 728;
+const size = 500;
 const sizeAttribute = size ? `-size-${size}` : '';
 console.log("reduced", reduced);
 function isFileImage(input) {
@@ -35,7 +35,7 @@ async function reduceFile() {
     .resize(size, null)
     .webp({ quality: reduced })
     // .toFile(`.${newRelDir}/${fileName}-${reduced}.webp`)    
-    .toFile(`.${newRelDir}/${fileName}${sizeAttribute}${reducedAttribute}.webp`)    
+    .toFile(`.${newRelDir}/${fileName}/${fileName}${sizeAttribute}${reducedAttribute}.webp`)    
 
 }
 
