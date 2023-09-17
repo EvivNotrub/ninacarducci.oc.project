@@ -15,3 +15,6 @@ https://cdn.jsdelivr.net/combine/gh/EvivNotrub/ninacarducci.oc.project/[path/fil
 
 Documentation can be found here:
 https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson
+
+If you need to purge cash to force users to get new version:
+https://www.jsdelivr.com/tools/purge
