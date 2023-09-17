@@ -2,16 +2,18 @@ import sharp from 'sharp';
 import { readdirSync, existsSync, mkdirSync, writeFile } from 'fs';
 import path from 'path';
 
-//enter below the path returned by lighthouse and the sizes of the image: ressource sizes and potential saving 
-const input = 'http://127.0.0.1:5500/assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash/edward-cisneros-3_h6-1NPDGw-unsplash.webp';
+//enter below the path returned by lighthouse and the quality of the image: 
+const input = 'http://127.0.0.1:5500/assets/images/nina.png';
 
 
 const file = path.basename(input);
 const fileName = path.parse(input).name;
 const directory = path.dirname(input);
 const newRelDir = directory.substr(directory.indexOf("assets") -1)
-const reduced = 65;
-const size = 1860;
+const reduced = null ;
+const reducedAttribute = reduced ? `-quality-${reduced}` : '';
+const size = 728;
+const sizeAttribute = size ? `-size-${size}` : '';
 console.log("reduced", reduced);
 function isFileImage(input) {
   const ext = path.extname(input);
@@ -31,9 +33,9 @@ function isFileImage(input) {
 async function reduceFile() {
     await sharp(`.${newRelDir}/${file}`)
     .resize(size, null)
-    // .webp({ quality: reduced })
+    .webp({ quality: reduced })
     // .toFile(`.${newRelDir}/${fileName}-${reduced}.webp`)    
-    .toFile(`.${newRelDir}/${fileName}-${size}.webp`)    
+    .toFile(`.${newRelDir}/${fileName}${sizeAttribute}${reducedAttribute}.webp`)    
 
 }
 
