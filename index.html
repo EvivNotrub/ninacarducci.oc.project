@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="description" content="Photographe professionnelle basée à Bordeaux, Nina saisie les moments exceptionnels à travers son regard passionné pour immortaliser le moment. Elle propose ses services dans toute la France pour des mariages, concerts, portraits, photo d’entreprises et autres.">
   <title>Photographe professionnelle à Bordeaux – Nina Carducci</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/EvivNotrub/ninacarducci.oc.project/dist/critical.css">
+  <link rel="stylesheet" href="./dist/critical.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/EvivNotrub/ninacarducci.oc.project/dist/uncritical.min.css" media="print" onload="this.media='all'">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -264,12 +264,16 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="pers-info">
-        <h2 class="name header__style h1">Nina Carducci</h2>
-      <address class="address">
-        <span>68 avenue Alsace-Lorraine,</span>
-        <span>33200 Bordeaux.</span>
-        <span>Tel.: <a href="tel:+33556677889">05 56 67 78 89</a></span>
+    <div itemscope itemtype="https://schema.org/LocalBusiness" class="pers-info">
+        <div>
+          <h2 itemprop="name" class="name header__style h1">Nina Carducci</h2>
+          <p itemprop="description">Photographe professionnelle</p>
+        </div>
+      <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" class="address">
+        <span itemprop="streetAddress">68 avenue Alsace-Lorraine,</span>
+        <span><span itemprop="postalCode">33200</span> <span itemprop="addressLocality">Bordeaux, France</span></span>
+        <span>Tel.: <a itemprop="telephone" href="tel:+33556677889">05 56 67 78 89</a></span>
+        <time itemprop="openingHours" datetime="Mon-Fr 10:00-19:00">Lu - Ven: de 10h à 19h</time>
       </address>
     </div>
     <nav class="nav">
