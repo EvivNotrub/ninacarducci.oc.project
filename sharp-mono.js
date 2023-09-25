@@ -3,7 +3,7 @@ import { readdirSync, existsSync, mkdirSync, writeFile } from 'fs';
 import path from 'path';
 
 //enter below the path returned by lighthouse and the quality of the image: 
-const input = 'http://127.0.0.1:5500/assets/images/nina.png';
+const input = './assets/images/linkedin.png';
 
 
 const file = path.basename(input);
@@ -12,7 +12,7 @@ const directory = path.dirname(input);
 const newRelDir = directory.substr(directory.indexOf("assets") -1)
 const reduced = null ;
 const reducedAttribute = reduced ? `-quality-${reduced}` : '';
-const size = 500;
+const size = 40;
 const sizeAttribute = size ? `-size-${size}` : '';
 console.log("reduced", reduced);
 function isFileImage(input) {
