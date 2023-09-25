@@ -3,7 +3,7 @@ import { readdirSync, existsSync, mkdirSync, writeFile } from 'fs';
 import path from 'path';
 
 //enter below the path returned by lighthouse and the quality of the image: 
-const input = './assets/images/linkedin.png';
+const input = './assets/images/facebook.png';
 
 
 const file = path.basename(input);
@@ -14,7 +14,6 @@ const reduced = null ;
 const reducedAttribute = reduced ? `-quality-${reduced}` : '';
 const size = 40;
 const sizeAttribute = size ? `-size-${size}` : '';
-console.log("reduced", reduced);
 function isFileImage(input) {
   const ext = path.extname(input);
   switch (ext.toLowerCase()) {
@@ -33,9 +32,9 @@ function isFileImage(input) {
 async function reduceFile() {
     await sharp(`.${newRelDir}/${file}`)
     .resize(size, null)
-    .webp({ quality: reduced })
+    // .webp({ quality: reduced })
     // .toFile(`.${newRelDir}/${fileName}-${reduced}.webp`)    
-    .toFile(`.${newRelDir}/${fileName}/${fileName}${sizeAttribute}${reducedAttribute}.webp`)    
+    .toFile(`.${newRelDir}/${fileName}${sizeAttribute}${reducedAttribute}.webp`)    
 
 }
 
