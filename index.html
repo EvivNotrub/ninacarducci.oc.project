@@ -29,9 +29,12 @@
 
 </head>
 
-<body>
+<body  itemscope itemtype="https://schema.org/LocalBusiness">
   <header class="top-header">
-    <h1 class="name">Nina Carducci</h1>
+    <div>
+      <h1 itemprop="name" class="name">Nina Carducci</h1>
+      <p itemprop="description">Photographe professionnelle</p>
+    </div>
     <nav class="nav">
       <ul>
         <li><a href="#about">À propos</a></li>
@@ -101,7 +104,7 @@
     </section>
     <section id="about">
       <div class="picture left">
-        <img src="https://cdn.jsdelivr.net/gh/EvivNotrub/ninacarducci.oc.project/assets/images/nina/nina.webp" width="1460" height="1456"
+        <img itemprop="image" src="https://cdn.jsdelivr.net/gh/EvivNotrub/ninacarducci.oc.project/assets/images/nina/nina.webp" width="1460" height="1456"
           alt="portrait trois quart de Nina portant un salopette de jeans bleuté et un t-shirt à rayures fines"
           title="Autoportrait"
           sizes="(min-width: 2020px) 560px, (min-width: 1200px) calc(30vw - 40px), (min-width: 660px) calc(46.15vw - 75px), calc(80vw - 51px)"
@@ -264,17 +267,20 @@
     </section>
   </main>
   <footer class="footer">
-    <div itemscope itemtype="https://schema.org/LocalBusiness" class="pers-info">
+    <div class="pers-info">
         <div>
-          <h2 itemprop="name" class="name header__style h1">Nina Carducci</h2>
-          <p itemprop="description">Photographe professionnelle</p>
+          <h2 class="name header__style h1">Nina Carducci</h2>
+          <p>Photographe professionnelle</p>
         </div>
-      <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" class="address">
-        <span itemprop="streetAddress">68 avenue Alsace-Lorraine,</span>
-        <span><span itemprop="postalCode">33200</span> <span itemprop="addressLocality">Bordeaux, France</span></span>
+
+      <div class="address">
+        <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="streetAddress">68 avenue Alsace-Lorraine,</span>
+          <br><span><span itemprop="postalCode">33200</span> <span itemprop="addressLocality">Bordeaux, France</span></span>
+        </address>
         <span>Tel.: <a itemprop="telephone" href="tel:+33556677889">05 56 67 78 89</a></span>
         <time itemprop="openingHours" datetime="Mon-Fr 10:00-19:00">Lu - Ven: de 10h à 19h</time>
-      </address>
+      </div>
     </div>
     <nav class="nav">
       <ul>
